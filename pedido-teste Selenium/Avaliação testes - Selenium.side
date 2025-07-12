@@ -1,0 +1,492 @@
+{
+  "id": "f5a2be1f-7c5d-4a61-adad-826b1daaadb5",
+  "version": "2.0",
+  "name": "Avaliação - Teste",
+  "url": "http://127.0.0.1:5500/pedido-teste.html",
+  "tests": [{
+    "id": "d00909a4-ef5d-4834-9d9a-f878f41d672c",
+    "name": "CT1 – Adicionar um pedido com campo “Aluno” vazio",
+    "commands": [{
+      "id": "d13ff5c0-dfc8-46ce-8588-9ae161ea5964",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:5500/pedido-teste.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8b46cfbf-c5ae-4a60-a44b-b41f248cec68",
+      "comment": "",
+      "command": "click",
+      "target": "id=aluno",
+      "targets": [
+        ["id=aluno", "id"],
+        ["css=#aluno", "css:finder"],
+        ["xpath=//input[@id='aluno']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "11518508-2c86-4ca0-b4d9-1718f16c02aa",
+      "comment": "",
+      "command": "click",
+      "target": "id=tamanho",
+      "targets": [
+        ["id=tamanho", "id"],
+        ["css=#tamanho", "css:finder"],
+        ["xpath=//select[@id='tamanho']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "582ee5b4-bf5d-435c-8858-7a108f1e71cc",
+      "comment": "",
+      "command": "click",
+      "target": "css=#tamanho > option:nth-child(1)",
+      "targets": [
+        ["css=#tamanho > option:nth-child(1)", "css:finder"],
+        ["xpath=//option[@value='PP']", "xpath:attributes"],
+        ["xpath=//select[@id='tamanho']/option", "xpath:idRelative"],
+        ["xpath=//option", "xpath:position"],
+        ["xpath=//option[contains(.,'PP')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "65bdb688-26a5-45b7-9d09-96df1e82e98a",
+      "comment": "",
+      "command": "click",
+      "target": "id=cor",
+      "targets": [
+        ["id=cor", "id"],
+        ["css=#cor", "css:finder"],
+        ["xpath=//select[@id='cor']", "xpath:attributes"],
+        ["xpath=//div[3]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8fd3a88e-0cb9-4267-8c0a-1b33666ad1f5",
+      "comment": "",
+      "command": "click",
+      "target": "css=#cor > option:nth-child(1)",
+      "targets": [
+        ["css=#cor > option:nth-child(1)", "css:finder"],
+        ["xpath=//option[@value='branco']", "xpath:attributes"],
+        ["xpath=//select[@id='cor']/option", "xpath:idRelative"],
+        ["xpath=//div[3]/select/option", "xpath:position"],
+        ["xpath=//option[contains(.,'Branco')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a63e887c-555e-414c-8701-53f093b5210d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Adicionar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f01189fa-e740-4db8-afe1-605b9d41be1a",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "É obrigátorio nome do Aluno. Tente novamente!",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "fcfe8e40-da66-4dd0-919f-2d4cfb2605b4",
+    "name": "CT2 – Adicionar múltiplos pedidos e verificar o total do pedido",
+    "commands": [{
+      "id": "663afe17-c569-49b0-8f83-678ea6cf0021",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:5500/pedido-teste.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3b4163c6-9482-4838-b761-65113fd04167",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "942x692",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "098703f0-79d9-4fd8-bd4a-288eaa34e0b5",
+      "comment": "",
+      "command": "click",
+      "target": "id=aluno",
+      "targets": [
+        ["id=aluno", "id"],
+        ["css=#aluno", "css:finder"],
+        ["xpath=//input[@id='aluno']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "64ac212b-ab99-469b-b137-dded00e39905",
+      "comment": "",
+      "command": "type",
+      "target": "id=aluno",
+      "targets": [
+        ["id=aluno", "id"],
+        ["css=#aluno", "css:finder"],
+        ["xpath=//input[@id='aluno']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Pedro"
+    }, {
+      "id": "ee140d53-744c-44c6-bf3c-7c747f61ae5f",
+      "comment": "",
+      "command": "click",
+      "target": "id=tamanho",
+      "targets": [
+        ["id=tamanho", "id"],
+        ["css=#tamanho", "css:finder"],
+        ["xpath=//select[@id='tamanho']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b98a5519-3a5b-4465-9d03-15a74463a250",
+      "comment": "",
+      "command": "select",
+      "target": "id=tamanho",
+      "targets": [],
+      "value": "label=M"
+    }, {
+      "id": "7b4cb3e0-6fde-4534-a731-f56fba4b7fd5",
+      "comment": "",
+      "command": "click",
+      "target": "css=#tamanho > option:nth-child(3)",
+      "targets": [
+        ["css=#tamanho > option:nth-child(3)", "css:finder"],
+        ["xpath=//option[@value='M']", "xpath:attributes"],
+        ["xpath=//select[@id='tamanho']/option[3]", "xpath:idRelative"],
+        ["xpath=//option[3]", "xpath:position"],
+        ["xpath=//option[contains(.,'M')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d3f963e8-b167-451c-a08f-818f7291d60d",
+      "comment": "",
+      "command": "click",
+      "target": "id=cor",
+      "targets": [
+        ["id=cor", "id"],
+        ["css=#cor", "css:finder"],
+        ["xpath=//select[@id='cor']", "xpath:attributes"],
+        ["xpath=//div[3]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f5230a86-baa0-46a6-afde-2d42e67d5ea5",
+      "comment": "",
+      "command": "click",
+      "target": "css=#cor > option:nth-child(1)",
+      "targets": [
+        ["css=#cor > option:nth-child(1)", "css:finder"],
+        ["xpath=//option[@value='branco']", "xpath:attributes"],
+        ["xpath=//select[@id='cor']/option", "xpath:idRelative"],
+        ["xpath=//div[3]/select/option", "xpath:position"],
+        ["xpath=//option[contains(.,'Branco')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1497be27-06c2-497c-9357-93e49ff77d08",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Adicionar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cc605f9c-5b5c-4ebc-a002-551859a422c2",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Adicionar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "edadc60d-4195-4713-b3ef-c217f01eee58",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Adicionar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bb537545-2a8a-41a9-9932-6b15f7c9125d",
+      "comment": "",
+      "command": "click",
+      "target": "id=aluno",
+      "targets": [
+        ["id=aluno", "id"],
+        ["css=#aluno", "css:finder"],
+        ["xpath=//input[@id='aluno']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "13b284df-343b-41da-bdc1-5bc27bd913be",
+      "comment": "",
+      "command": "type",
+      "target": "id=aluno",
+      "targets": [
+        ["id=aluno", "id"],
+        ["css=#aluno", "css:finder"],
+        ["xpath=//input[@id='aluno']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Maria"
+    }, {
+      "id": "33610ac3-7572-4eaf-bc7a-4ac48eb45c58",
+      "comment": "",
+      "command": "click",
+      "target": "id=tamanho",
+      "targets": [
+        ["id=tamanho", "id"],
+        ["css=#tamanho", "css:finder"],
+        ["xpath=//select[@id='tamanho']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ee65cf1b-9b3f-4e91-a426-d9b1fab979c3",
+      "comment": "",
+      "command": "select",
+      "target": "id=tamanho",
+      "targets": [],
+      "value": "label=P"
+    }, {
+      "id": "e801ed08-8e74-4405-ab07-f23b032d5e74",
+      "comment": "",
+      "command": "click",
+      "target": "css=#tamanho > option:nth-child(2)",
+      "targets": [
+        ["css=#tamanho > option:nth-child(2)", "css:finder"],
+        ["xpath=//option[@value='P']", "xpath:attributes"],
+        ["xpath=//select[@id='tamanho']/option[2]", "xpath:idRelative"],
+        ["xpath=//option[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dd908ab0-f2e9-40c5-b899-5dbd09b7678c",
+      "comment": "",
+      "command": "click",
+      "target": "id=cor",
+      "targets": [
+        ["id=cor", "id"],
+        ["css=#cor", "css:finder"],
+        ["xpath=//select[@id='cor']", "xpath:attributes"],
+        ["xpath=//div[3]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ed88ef17-c4f2-4eae-a518-eba5d36fbe44",
+      "comment": "",
+      "command": "select",
+      "target": "id=cor",
+      "targets": [],
+      "value": "label=Verde"
+    }, {
+      "id": "62860639-88c0-4e95-97d0-44897880170a",
+      "comment": "",
+      "command": "click",
+      "target": "css=#cor > option:nth-child(4)",
+      "targets": [
+        ["css=#cor > option:nth-child(4)", "css:finder"],
+        ["xpath=//option[@value='verde']", "xpath:attributes"],
+        ["xpath=//select[@id='cor']/option[4]", "xpath:idRelative"],
+        ["xpath=//div[3]/select/option[4]", "xpath:position"],
+        ["xpath=//option[contains(.,'Verde')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d4b1ac03-c30e-4f64-b8e9-2b32e0eb6f35",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Adicionar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "79d0063e-4825-4b88-9992-63ee5f29767d",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Adicionar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "10fadb12-c3aa-4e96-a540-a445a29a5f52",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Adicionar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5e94b6dc-a6ec-49f9-ba0a-4fd5f4fa79fc",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=total-pedido",
+      "targets": [],
+      "value": "R$ 100,00"
+    }]
+  }, {
+    "id": "1af5493f-74c8-428f-9c79-94b072fac0c1",
+    "name": "CT3 – Adicionar um único pedido e verificar se o campo “Aluno” é limpo automaticamente",
+    "commands": [{
+      "id": "af5d59b2-542b-465c-9e36-bd074f0c6874",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:5500/pedido-teste.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5ccee333-6310-4482-b5a0-649a23c461e9",
+      "comment": "",
+      "command": "click",
+      "target": "id=aluno",
+      "targets": [
+        ["id=aluno", "id"],
+        ["css=#aluno", "css:finder"],
+        ["xpath=//input[@id='aluno']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1e987b06-9519-4fe2-a63b-cc90859240d7",
+      "comment": "",
+      "command": "type",
+      "target": "id=aluno",
+      "targets": [
+        ["id=aluno", "id"],
+        ["css=#aluno", "css:finder"],
+        ["xpath=//input[@id='aluno']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Pedro"
+    }, {
+      "id": "e6fa59ed-cb36-4fec-a45c-869b8062a199",
+      "comment": "",
+      "command": "click",
+      "target": "id=tamanho",
+      "targets": [
+        ["id=tamanho", "id"],
+        ["css=#tamanho", "css:finder"],
+        ["xpath=//select[@id='tamanho']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "eacb0e75-b975-46d7-a674-112f79e222d7",
+      "comment": "",
+      "command": "select",
+      "target": "id=tamanho",
+      "targets": [],
+      "value": "label=M"
+    }, {
+      "id": "238ffe71-0bf3-41e0-af18-f3dd6e1319a6",
+      "comment": "",
+      "command": "click",
+      "target": "css=#tamanho > option:nth-child(3)",
+      "targets": [
+        ["css=#tamanho > option:nth-child(3)", "css:finder"],
+        ["xpath=//option[@value='M']", "xpath:attributes"],
+        ["xpath=//select[@id='tamanho']/option[3]", "xpath:idRelative"],
+        ["xpath=//option[3]", "xpath:position"],
+        ["xpath=//option[contains(.,'M')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "88c7b74e-a50e-4fd0-b8b0-e9bc37c646e2",
+      "comment": "",
+      "command": "click",
+      "target": "id=cor",
+      "targets": [
+        ["id=cor", "id"],
+        ["css=#cor", "css:finder"],
+        ["xpath=//select[@id='cor']", "xpath:attributes"],
+        ["xpath=//div[3]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4186e2e4-a510-42c8-8a67-d4f338ed1f5e",
+      "comment": "",
+      "command": "select",
+      "target": "id=cor",
+      "targets": [],
+      "value": "label=Vermelho"
+    }, {
+      "id": "439e3db9-6d42-4807-8cd8-f465a7d91dc1",
+      "comment": "",
+      "command": "click",
+      "target": "css=#cor > option:nth-child(3)",
+      "targets": [
+        ["css=#cor > option:nth-child(3)", "css:finder"],
+        ["xpath=//option[@value='vermelho']", "xpath:attributes"],
+        ["xpath=//select[@id='cor']/option[3]", "xpath:idRelative"],
+        ["xpath=//div[3]/select/option[3]", "xpath:position"],
+        ["xpath=//option[contains(.,'Vermelho')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7bd97b14-edb5-475d-993c-e61f9855a0bc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Adicionar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bcd4a41a-d75d-4f7c-a4cd-35a43a6b0452",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=aluno",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "cebb09ef-318a-4868-908c-d72246d5430f",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["d00909a4-ef5d-4834-9d9a-f878f41d672c"]
+  }],
+  "urls": ["http://127.0.0.1:5500/pedido-teste.html"],
+  "plugins": []
+}
